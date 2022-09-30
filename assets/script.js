@@ -2,7 +2,8 @@
 const lowerList=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 const upperList=["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 const numericList=["0","1","2","3","4","5","6","7","8","9"];
-const specialList=[];
+const specialList=[" ","!",'"',"#","$","%","&","’","(",")","*","+",",","-",".","/",":",";","<","=",">","?","@","[",'\\',"]","^","_","`","{",
+"|","}","~"]
 var passString= "";
 
 
@@ -31,26 +32,27 @@ function generatePassword(){
     if(lowercase==true){
       charGenerator++;
       passString+=lowerList[Math.floor(Math.random()*lowerList.length)];
-      console.log(passString);
+      
 
-    }
-    else if(uppercase==true){
+    };
+   if(uppercase==true){
       charGenerator++;
       passString+=upperList[Math.floor(Math.random()*upperList.length)];
       
-    }
-    else if(numeric==true){
+      
+    };
+    if(numeric==true){
       charGenerator++;
-      var tempChar=[Math.floor(Math.random()*numericList.length)];
-      passString.push(tempChar);
+      passString+=numericList[Math.floor(Math.random()*numericList.length)];
+      
 
     }
-    else if(specialChar==true){
+    if(specialChar==true){
       charGenerator++;
-      var tempChar=[Math.floor(Math.random()*specialList.length)];
-      passString.push(tempChar);
+      passString+=specialList[Math.floor(Math.random()*specialList.length)];
+      
 
-    }
+    };
 
   }
   return passString;
