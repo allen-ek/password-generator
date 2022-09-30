@@ -48,12 +48,10 @@ function generatePassword(){
       passString+=numericList[Math.floor(Math.random()*numericList.length)];
       
 
-    }
+    };
     if(specialChar==true){
       charGenerator++;
       passString+=specialList[Math.floor(Math.random()*specialList.length)];
-      
-
     };
 
   }
