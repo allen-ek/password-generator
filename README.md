@@ -1,4 +1,4 @@
-# password-generator Project
+# Random Password Generator Project
 
 # Authors
 Allen Klein
@@ -15,7 +15,16 @@ HTML
 JavaScript
 CSS
 Github
-
+## Code Snippet
+```html
+var passSize= prompt("Enter how long you want the password from 8 to 128 characters");
+  //checks to see if inputted password size is allowed
+  while (passSize<8 || passSize>128){
+    alert("Incorrect size selection please pick between 8 to 128 characters");
+    passSize= prompt("Enter how long you want the password from 8 to 128 characters");
+  }
+```
+This code snippet showcases usage of the prompt and alert methods in javascript to interact with the user as well as validating user inputs. This allows for notfication of how the password will be generated as well as error checking if the user mistypes.
 ## Screenshot of project webpage
 ![Site](Screenshot.png)
 
